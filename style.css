@@ -1,0 +1,91 @@
+body {
+    overflow: hidden;
+}
+annotation {
+    z-index: -1;
+}
+draw-container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+sticky-note {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+.nav_container{
+    position: fixed;
+    width: 400px;
+    height: 50px;
+    top:25px;
+    right: 100px;
+    height: 50px;
+    display: flex;
+    z-index: 10;
+    
+}
+.nav_items {
+    background-color: #0066ff;
+    width: 20%;
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+    font-size: 150%;
+    color: white;
+    cursor: pointer;
+}
+.nav_items:hover
+{
+    background-color: black;
+}
+.active-btn{
+    background-color: #3d3402;
+}
+.colors_container{
+    position: fixed;
+    width: 400px;
+    height: 50px;
+    top:75px;
+    right: 100px;
+    display: flex;
+    z-index: 10;
+}
+.color_item {
+    width: 16%;
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+    font-size: 150%;
+    cursor: pointer;
+}
+
+
+#notes { margin-top: 30px;  }
+.sticky-note { height: 200px; width: 200px; color: #7f6c04; background: #f9dd45; border-radius: 10px; border: 0px; font-family: Helvetica, Arial, sans-serif; font-size: 13px; box-shadow: 2px 2px 10px rgba(0,0,0,0.4); overflow: hidden; z-index: 4; }
+.contents { background: #f9e055; margin: 20px; outline: none;}
+.handle { cursor: move; background: #7f6c04; border-radius: 8px 8px 0px 0px;padding:10px; }
+.handle .close {cursor: pointer; float:right;font-size:35px;    margin-top: -15px;}
+#save { margin-left: 7px; }
+html body .sticky-note div.close { color: #3d3402; opacity: 1; text-shadow: 1px 0px 1px #a08805; padding: 6px; }
+#sticky-note-data {
+    background: #f9e055;
+    outline: none;
+}
+#sticky-note-data:focus {
+    background: #f9e055;
+    outline: none;
+    border: none;
+}
+
+.selected-color{
+    border-bottom: 10px solid black;
+}
+.top-layer {
+    z-index: 3
+}
+.buttom-layer {
+    z-index: 2;
+}
