@@ -1,0 +1,19 @@
+<div ng-click="newStick($event)" id="newStick">
+    <div id="sticks" style="width: 100%; height: 100vh;">
+        <div class="stick_note_container">
+            <div ng-repeat="stick in sticks">
+                <canvas width="1200" height="600" style="position: absolute;" ng-attr-id="{{'myCanvasLine'+$index}}"></canvas>
+                <div ng-style="{'position': 'absolute', 'top': '{{stick.y1}}px', 'left': '{{stick.x1-100}}px', 'width':'0%', 'height':'0%'}">
+                    <div ng-click="stopProp($event)" ng-class="'sticky-note ui-draggable'" ng-attr-id="{{$index}}">
+                        <div ng-class="'handle'">&nbsp;
+                            <div ng-class="'close'" ng-click="removeStick($event,$index)">&times;</div>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="8" id="sticky-note-data" placeholder="{{stick.content}}"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
